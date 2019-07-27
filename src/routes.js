@@ -6,11 +6,18 @@ import {
 import ClassComponent from './demos/components/class-component';
 // const classComponent = React.lazy(() => import('./demos/components/class-component'));
 import PureComponent from './demos/components/pure-component';
+import FuncComponent from './demos/components/function-component';
+// import HigherComponent from './demos/components/higher-component-simple';
+import HigherComponent from './demos/components/higher-component';
+import PortalComponent from './demos/components/portal-component';
 
 export default (
   <>
     <Route path = '/class-component' component = {ClassComponent}/>
     <Route path = '/pure-component' component = {PureComponent}/>
+    <Route path = '/func-component' component = {FuncComponent}/>
+    <Route path = '/higher-component' component = {HigherComponent}/>
+    <Route path = '/portal-component' component = {PortalComponent}/>
   </>
 )
 
