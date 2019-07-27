@@ -29,10 +29,13 @@ class App extends Component {
             <Link to='/pure-component'>纯组件</Link>
           </li>
           <li>
-            <Link to='/pure-component'>函数式组件</Link>
+            <Link to='/func-component'>函数式组件</Link>
           </li>
           <li>
-            <Link to='/pure-component'>高阶组件</Link>
+            <Link to='/higher-component'>高阶组件</Link>
+          </li>
+          <li>
+            <Link to='/portal-component'>组件插槽(Portal)</Link>
           </li>
         </ul>
         <div>{ routes }</div>
