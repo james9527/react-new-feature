@@ -37,6 +37,9 @@ class App extends Component {
           <li>
             <Link to='/portal-component'>组件插槽(Portal)</Link>
           </li>
+          <li>
+            <Link to='/suspense-component'>suspense组件</Link>
+          </li>
         </ul>
         <div>{ routes }</div>
       </div>
