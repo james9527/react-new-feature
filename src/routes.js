@@ -10,6 +10,7 @@ import FuncComponent from './demos/components/function-component';
 // import HigherComponent from './demos/components/higher-component-simple';
 import HigherComponent from './demos/components/higher-component';
 import PortalComponent from './demos/components/portal-component';
+import SuspenseComponent from './demos/suspense/index';
 
 export default (
   <>
@@ -18,6 +19,7 @@ export default (
     <Route path = '/func-component' component = {FuncComponent}/>
     <Route path = '/higher-component' component = {HigherComponent}/>
     <Route path = '/portal-component' component = {PortalComponent}/>
+    <Route path = '/suspense-component' component = {SuspenseComponent}/>
   </>
 )
 
