@@ -23,7 +23,7 @@ const DemoComponent = memo(Child, isEqual);
 
 class Counter extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       second: 10
     }

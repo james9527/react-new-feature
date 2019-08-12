@@ -43,6 +43,9 @@ class App extends Component {
           <li>
             <Link to='/memo-component'>memo组件</Link>
           </li>
+          <li>
+            <Link to='/context-component'>context组件</Link>
+          </li>
         </ul>
         <div>{ routes }</div>
       </div>
