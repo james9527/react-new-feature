@@ -46,6 +46,27 @@ class App extends Component {
           <li>
             <Link to='/context-component'>context组件</Link>
           </li>
+          <li>
+            <Link to='/ref-component'>createRef</Link>
+          </li>
+          <li>
+            <Link to='/fiber-component'>Fiber组件</Link>
+          </li>
+          <li>
+            <Link to='/hooks-component'>Hooks典型应用</Link>
+          </li>
+          <li>
+            <Link to='/hooks-for-ref'>Hooks结合Ref</Link>
+          </li>
+          <li>
+            <Link to='/hooks-for-memo'>Hooks结合Memo</Link>
+          </li>
+          <li>
+            <Link to='/hooks-for-fetch'>Hooks结合Fetch</Link>
+          </li>
+          <li>
+            <Link to='/hooks-for-context'>Hooks结合Context</Link>
+          </li>
         </ul>
         <div>{ routes }</div>
       </div>
