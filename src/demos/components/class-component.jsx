@@ -14,20 +14,43 @@ export default class Result extends Component {
     this.setState({
       count: ++count
     });
+    console.log('this.state.count:::', this.state.count) // 0
 
     this.setState({
       count: ++count
     });
+    console.log('this.state.count:::', this.state.count) // 0
 
     setTimeout(() => {
       this.setState({
         count: ++count
       });
+      console.log('this.state.count:::', this.state.count) // 3
 
       this.setState({
         count: ++count
       });
+      console.log('this.state.count:::', this.state.count) // 4
     }, 1000);
+    /**
+     * 连续执行setState多次，如果此时只有setTimeout，是可以顺利打印出1->2->3的
+     */
+    // setTimeout(() => {
+    //   this.setState({
+    //     count: ++count
+    //   });
+    //   console.log('this.state.count:::', this.state.count) // 1
+
+    //   this.setState({
+    //     count: ++count
+    //   });
+    //   console.log('this.state.count:::', this.state.count) // 2
+
+    //   this.setState({
+    //     count: ++count
+    //   });
+    //   console.log('this.state.count:::', this.state.count) // 3
+    // }, 0);
   }
 
   componentDidMount() {
@@ -50,7 +73,8 @@ export default class Result extends Component {
   }
 
   render() {
-    console.log(this.state.count);
+    // 连续执行setState多次，如果此时只有setTimeout，是可以顺利打印出0->1->2->3的
+    console.log(this.state.count); // 2 -> (隔1s后) -> 3 -> 4
     // componentWillMount后console输出结果顺序：2 -> (隔1s后) -> 3 -> 4
     // 原因：主要是因为react中存在一种叫事务的机制，componentWillMount生命周期之后，虚拟dom就执行render操作，然后执行一个叫batchedUpdates的方法，随后会将其中某类事务添加到队列中，在某一时刻做批量更新操作。由于count是全局变量，setTimeout又属于异步执行的，所以先后输出了3和4
     return (
